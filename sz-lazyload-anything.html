@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title> Lazyload anything by Sabrina Zeidan</title>
+<!-- https://github.com/shinsenter/defer.js/ -->
+<script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@3.4.0/dist/defer.min.js"></script>
+<script type="text/javascript">
+  //TODO add lazy to element before
+  Defer.dom('.lazy', 200, '', function (div) {
+    var lazyclass = div.getAttribute('class');
+    if (lazyclass) {
+		var actualclass = lazyclass.replace('lazy', 'lazyloaded');
+		div.className = actualclass;
+    }
+  });
+  
+  
+</script>
+
+
+<style>  
+ div.lazy, span.lazy, p.lazy, section.lazy, .lazy:after {
+    background-image: none !important; 
+	background-color: #F1F1FA;
+  }
+
+</style>
+
+
+<style type="text/css">
+img {
+max-width: 50%;
+width: 100%; 
+height: auto; 
+}
+
+#thedivID {
+  max-width: 600px;
+  height: 400px;
+}
+
+.BGSetInClass{
+  background-image: url("https://picsum.photos/200/300?random=11");
+  max-width: 600px;
+  height: 400px;
+  display: block; /* for non-block elements like span */
+}
+
+#divBGSetInID{
+  background-image: url("https://picsum.photos/200/300?random=1");
+  max-width: 600px;
+  height: 400px;
+}
+
+#spanBGSetInID{
+  background-image: url("https://picsum.photos/200/300?random=8");
+  max-width: 600px;
+  height: 400px;
+  display: inline-block;
+}
+
+.divi-elementor-vc-class {background-image: url(https://picsum.photos/200/300?random=4);background-position: center;background-repeat: no-repeat;background-size: cover;}
+
+
+.complicated--classname--here:after {	
+	content: "";
+    width: 30px;
+    height: 30px;
+    background: url(https://sabrinazeidan.com/wp-content/uploads/2022/07/pic_square_new.jpg) no-repeat;
+    top: 10px;
+    right: 5px;
+    position: relative;
+    background-size: cover;
+    contain: cover;
+    display: inline-block;	
+	}
+	
+</style>
+</head>
+
+
+
+<body>
+<h1> Lazyload anything by <a href="https://sabrinazeidan.com">Sabrina Zeidan</a></h1>
+<h2>Even background images, even background images in DIVI/Elementor/Visual Composer etc, even icons, even icons set in after/before CSS pseudo elements</h2>
+
+<h3>No images should be loaded when you open this page (check Network tab in Chrome DevTools) as they all are out of the first viewport and should be lazyloaded. They will be loaded one by one when you scroll down the page.</h3>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</p>
+
+
+
+<H1> 9 images should be loaded  when you scroll:</h1>
+
+
+<h2>#1 Regular img</h2>
+<pre> img class="lazy" data-src=""</pre>
+<img class="lazy" data-src="https://picsum.photos/300/300?random=10" width="200" height="300"  />  
+
+<h2>#2 Responsive img tag with srcset</h2>
+<pre> img class="lazy" data-src="" sizes="" data-srcset="" </pre>
+
+<img  alt="Hire me to speed up your website" width="1024" height="357" data-src="https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-300x104.png" class="wp-image-19452 lazy" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" data-srcset="https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-1024x357.png 1024w,https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-300x104.png 300w,https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-768x267.png 768w,https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-740x258.png 740w,https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2-345x120.png 345w,https://sabrinazeidan.com/wp-content/uploads/2020/03/image-2.png 1361w" >
+
+
+<h2>#3 div tag with inline CSS</h2>
+<pre> div id="thedivID" class="lazy" data-style="background: url() </pre>
+<div id="thedivID" class="lazy" data-style="background: url(https://picsum.photos/200/300?random=11) 50% 50% / cover no-repeat;"></div> 
+
+
+<h2>#4 div tag with background url set in CSS class</h2>
+<pre> div class="BGSetInClass lazy" </pre>
+<div class="BGSetInClass lazy"></div> 
+
+<h2>#5 div tag with background url set in CSS ID</h2>
+<pre> div data-id="divBGSetInID" class="someclass lazy" </pre>
+<div data-id="divBGSetInID" class="someclass lazy"></div>
+
+<h2>#6 span tag with background url set in CSS ID</h2>
+<pre> span data-id="spanBGSetInID" class="someclass lazy" </pre>
+<span data-id="spanBGSetInID" class="someclass lazy">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</span>
+
+<h2>#7 span tag with background url set in CSS class</h2>
+<pre> span class="BGSetInClass lazy" </pre>
+<span class="BGSetInClass lazy"></span> 
+
+<h2>#8 section tag with background url set in CSS class (DIVI/Elemenentor/VC background images etc)</h2>
+<pre> section class="divi-elementor-vc-class lazy" </pre>
+<pre> .divi-elementor-vc-class {background-image: url();} </pre>
+
+<section class="divi-elementor-vc-class lazy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquet magna. Integer non ipsum porta, accumsan turpis ac, facilisis dolor. Phasellus sagittis diam non semper cursus. Nullam scelerisque tristique libero id luctus. Ut ut metus viverra leo ullamcorper porta. Integer vitae commodo eros, id condimentum libero. Maecenas efficitur nunc augue, gravida suscipit purus sollicitudin vel. Morbi ac facilisis orci. Duis ut ex in ipsum feugiat dictum. Etiam sit amet erat eu tellus rhoncus molestie nec nec arcu. Morbi maximus arcu ac diam sodales ultrices. Aliquam finibus luctus elementum. Phasellus quis lectus vulputate, vehicula enim et, condimentum leo. Integer egestas arcu nec nibh vehicula dignissim.</section>
+
+
+<h2>#9  div tag with background url set in CSS :after pseudo class (for example, social icons, menu icons etc) </h2>
+<pre> div class="complicated--classname--here lazy" </pre>
+<pre> .complicated--classname--here:after {background: url();} </pre>
+<div class="complicated--classname--here lazy"></div>
+
+<h2>#10 TODO - exclusions</h2>
+
+<h2>#11 TODO - how do we lazyload elements that are not displayed? For example inside the modal, inside the dropdown menu etc</h2>
+<p>Note, that img tag might have a bg image as well </p>
+<code>.someclass img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    text-indent: -999em;
+    background-image: url(build/assets/images/default-profile.jpg);
+    background-position: center;
+    background-size: cover;
+}
+</code>
+</p>
+
+<h1> To achieve that: we need to add lazy class to the element and replace style/id/src/srcset with data=*</h1>
+
+</body>
+</html>
